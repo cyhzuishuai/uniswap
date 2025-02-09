@@ -2,7 +2,7 @@
 
 Uniswap v2 的合约主要分为两类： core 和 periphery 合约，其中core合约仅包含最基础的交易功能，仅仅200行，由于用户资金都存储在core合约里，因此需要保证core合约最简化，避免引入bug；periphery合约则针对用户使用场景提供多种封装方法，比如支持原生ETH交易（自动转为WETH），多路径交换（一个方法同时执行A→B→C交易）等，其底层调用的是core合约。我们在[app.uniswap.org](https://app.uniswap.org/#/swap)界面操作时用的就是periphery合约。
 
-![image-20250209230626493](C:\Users\cyh\AppData\Roaming\Typora\typora-user-images\image-20250209230626493.png)
+![image-20250209230626493](UniswapV2/image-20250209230626493.png)
 
 我们先介绍几个主要合约的功能：
 
